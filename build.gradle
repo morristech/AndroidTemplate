@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.5.6'
+        classpath 'com.frogermcs.androiddevmetrics:androiddevmetrics-plugin:0.4'
+        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'me.tatarka:gradle-retrolambda:3.3.0-beta4'
+        classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
+        classpath "net.ltgt.gradle:gradle-errorprone-plugin:0.0.8"
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.13.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+subprojects {
+    afterEvaluate {
+        tasks.findByName('pmd').dependsOn('assemble')
+        tasks.findByName('findbugs').dependsOn('assemble')
+
+        def checkTask = tasks.findByName('check')
+
+        checkTask.dependsOn('pmd')
+        checkTask.dependsOn('findbugs')
+        checkTask.dependsOn('checkstyle')
+
+    }
+}
+
+
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
