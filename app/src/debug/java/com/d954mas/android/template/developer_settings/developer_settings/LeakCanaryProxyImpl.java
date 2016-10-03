@@ -9,10 +9,8 @@ import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
 public class LeakCanaryProxyImpl implements LeakCanaryProxy {
-
     @NonNull
     private final Application application;
-
     @Nullable
     private RefWatcher refWatcher;
 

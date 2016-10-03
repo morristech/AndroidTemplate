@@ -1,5 +1,6 @@
 package com.d954mas.android.template;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
 
 import timber.log.Timber;
 
+@SuppressLint("Registered")
 public class BaseApp extends Application {
     private AppComponent component;
 

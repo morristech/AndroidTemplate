@@ -7,10 +7,9 @@ import com.d954mas.android.template.developer_settings.iface.StethoProxy;
 import com.facebook.stetho.Stetho;
 
 public class StethoProxyImpl implements StethoProxy {
-    @NonNull
-    private final Application application;
+    @NonNull private final Application application;
 
-    public StethoProxyImpl(Application application) {
+    public StethoProxyImpl(@NonNull Application application) {
         this.application = application;
     }
 

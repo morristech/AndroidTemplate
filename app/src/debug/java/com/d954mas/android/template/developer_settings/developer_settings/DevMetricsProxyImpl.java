@@ -7,7 +7,7 @@ import com.d954mas.android.template.developer_settings.iface.DevMetricsProxy;
 import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
 
 public class DevMetricsProxyImpl implements DevMetricsProxy {
-    private final Application application;
+    @NonNull private final Application application;
 
     public DevMetricsProxyImpl(@NonNull final Application application) {
         this.application = application;
