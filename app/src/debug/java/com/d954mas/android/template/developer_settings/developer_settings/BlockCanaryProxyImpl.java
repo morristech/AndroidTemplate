@@ -16,6 +16,6 @@ public class BlockCanaryProxyImpl implements BlockCanaryProxy {
 
     @Override
     public void init() {
-        BlockCanary.install(app,new BlockCanaryContext());
+        BlockCanary.install(app, new BlockCanaryContext());
     }
 }

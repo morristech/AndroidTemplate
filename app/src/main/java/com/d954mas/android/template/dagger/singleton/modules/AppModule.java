@@ -1,4 +1,4 @@
-package com.d954mas.android.template.dagger.modules;
+package com.d954mas.android.template.dagger.singleton.modules;
 
 import android.app.Application;
 import android.content.Context;

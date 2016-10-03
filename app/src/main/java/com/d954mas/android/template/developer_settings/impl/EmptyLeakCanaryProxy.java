@@ -6,10 +6,10 @@ import com.d954mas.android.template.developer_settings.iface.LeakCanaryProxy;
 
 public class EmptyLeakCanaryProxy implements LeakCanaryProxy {
     @Override
-    public void init() {
+    public void init() {//pass
     }
 
     @Override
-    public void watch(@NonNull Object object) {
+    public void watch(@NonNull Object object) {//pass
     }
 }

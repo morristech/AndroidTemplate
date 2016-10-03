@@ -6,7 +6,7 @@ apply from: '../code_quality_tools/quality.gradle'
 apply plugin: 'com.github.ben-manes.versions'
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "com.d954mas.android.template"
         minSdkVersion 16
@@ -82,7 +82,7 @@ android {
 
 
 ext {
-    supportLib = '24.2.0'
+    supportLib = '24.2.1'
 }
 dependencies {
     //region all

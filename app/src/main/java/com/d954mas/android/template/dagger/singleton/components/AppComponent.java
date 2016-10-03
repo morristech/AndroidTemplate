@@ -1,7 +1,7 @@
-package com.d954mas.android.template.dagger.components;
+package com.d954mas.android.template.dagger.singleton.components;
 
-import com.d954mas.android.template.dagger.modules.AppModule;
-import com.d954mas.android.template.dagger.modules.DeveloperModule;
+import com.d954mas.android.template.dagger.singleton.modules.AppModule;
+import com.d954mas.android.template.dagger.singleton.modules.DeveloperModule;
 import com.d954mas.android.template.developer_settings.iface.BlockCanaryProxy;
 import com.d954mas.android.template.developer_settings.iface.DevMetricsProxy;
 import com.d954mas.android.template.developer_settings.iface.LeakCanaryProxy;

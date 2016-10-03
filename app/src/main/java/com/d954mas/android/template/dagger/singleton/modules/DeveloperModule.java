@@ -1,4 +1,4 @@
-package com.d954mas.android.template.dagger.modules;
+package com.d954mas.android.template.dagger.singleton.modules;
 
 import com.d954mas.android.template.developer_settings.iface.BlockCanaryProxy;
 import com.d954mas.android.template.developer_settings.iface.DevMetricsProxy;
