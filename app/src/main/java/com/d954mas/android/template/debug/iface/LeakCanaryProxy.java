@@ -1,4 +1,4 @@
-package com.d954mas.android.template.developer_settings.iface;
+package com.d954mas.android.template.debug.iface;
 
 import android.support.annotation.NonNull;
 

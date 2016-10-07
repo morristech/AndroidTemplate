@@ -1,15 +1,17 @@
 package com.d954mas.android.template.dagger.singleton.modules;
 
-import com.d954mas.android.template.developer_settings.iface.BlockCanaryProxy;
-import com.d954mas.android.template.developer_settings.iface.DevMetricsProxy;
-import com.d954mas.android.template.developer_settings.iface.LeakCanaryProxy;
-import com.d954mas.android.template.developer_settings.iface.StethoProxy;
-import com.d954mas.android.template.developer_settings.iface.ViewContainer;
-import com.d954mas.android.template.developer_settings.impl.EmptyBlockCanary;
-import com.d954mas.android.template.developer_settings.impl.EmptyDevMetricsProxy;
-import com.d954mas.android.template.developer_settings.impl.EmptyLeakCanaryProxy;
-import com.d954mas.android.template.developer_settings.impl.EmptyStethoProxy;
-import com.d954mas.android.template.developer_settings.impl.EmptyViewContainer;
+import com.d954mas.android.template.debug.iface.BlockCanaryProxy;
+import com.d954mas.android.template.debug.iface.DevMetricsProxy;
+import com.d954mas.android.template.debug.iface.LeakCanaryProxy;
+import com.d954mas.android.template.debug.iface.StethoProxy;
+import com.d954mas.android.template.debug.iface.TinyDancerProxy;
+import com.d954mas.android.template.debug.iface.ViewContainer;
+import com.d954mas.android.template.debug.impl.EmptyBlockCanary;
+import com.d954mas.android.template.debug.impl.EmptyDevMetricsProxy;
+import com.d954mas.android.template.debug.impl.EmptyLeakCanaryProxy;
+import com.d954mas.android.template.debug.impl.EmptyStethoProxy;
+import com.d954mas.android.template.debug.impl.EmptyTinyDancerProxy;
+import com.d954mas.android.template.debug.impl.EmptyViewContainer;
 
 import javax.inject.Singleton;
 
@@ -41,6 +43,11 @@ public class DeveloperModule {
     @Provides @Singleton
     BlockCanaryProxy provideBlockCanaryProxy() {
         return new EmptyBlockCanary();
+    }
+
+    @Provides @Singleton
+    TinyDancerProxy provideTinyDancerProxy() {
+        return new EmptyTinyDancerProxy();
     }
 
 

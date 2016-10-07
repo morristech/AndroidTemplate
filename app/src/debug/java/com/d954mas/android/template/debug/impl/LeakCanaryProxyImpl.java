@@ -1,10 +1,10 @@
-package com.d954mas.android.template.developer_settings.developer_settings;
+package com.d954mas.android.template.debug.impl;
 
 import android.app.Application;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.d954mas.android.template.developer_settings.iface.LeakCanaryProxy;
+import com.d954mas.android.template.debug.iface.LeakCanaryProxy;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 

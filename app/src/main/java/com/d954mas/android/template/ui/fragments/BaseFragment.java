@@ -1,27 +1,26 @@
 package com.d954mas.android.template.ui.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.View;
 
+import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.d954mas.android.template.BaseApp;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 @SuppressWarnings("PMD.AbstractClassWithoutAnyMethod")
-public abstract class BaseFragment extends Fragment {
+
+public abstract class BaseFragment extends MvpAppCompatFragment {
     private Handler mainThreadHandler;
     private Unbinder viewBinder;
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
+    @Override public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         mainThreadHandler = new Handler(Looper.getMainLooper());
     }
 
@@ -35,7 +34,6 @@ public abstract class BaseFragment extends Fragment {
         if (Looper.myLooper() == Looper.getMainLooper() && isFragmentAlive()) {
             runnable.run();
         } else {
-            assert mainThreadHandler != null;
             mainThreadHandler.post(() -> {
                 if (isFragmentAlive()) {
                     runnable.run();

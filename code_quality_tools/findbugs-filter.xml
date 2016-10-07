@@ -5,6 +5,11 @@
         <Class name="~.*R\$.*"/>
     </Match>
 
+    <!-- Do not check auto-generated Moxy -->
+    <Match>
+        <Class name="~.*$$State$*"/>
+    </Match>
+
     <!-- Do not check auto-generated manifest classes -->
     <Match>
         <Class name="~.*Manifest\$.*"/>

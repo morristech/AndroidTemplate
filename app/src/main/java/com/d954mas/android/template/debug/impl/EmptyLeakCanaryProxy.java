@@ -1,8 +1,8 @@
-package com.d954mas.android.template.developer_settings.impl;
+package com.d954mas.android.template.debug.impl;
 
 import android.support.annotation.NonNull;
 
-import com.d954mas.android.template.developer_settings.iface.LeakCanaryProxy;
+import com.d954mas.android.template.debug.iface.LeakCanaryProxy;
 
 public class EmptyLeakCanaryProxy implements LeakCanaryProxy {
     @Override

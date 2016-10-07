@@ -1,10 +1,10 @@
-package com.d954mas.android.template.developer_settings.developer_settings;
+package com.d954mas.android.template.debug.impl;
 
 
 import android.app.Application;
 import android.support.annotation.NonNull;
 
-import com.d954mas.android.template.developer_settings.iface.BlockCanaryProxy;
+import com.d954mas.android.template.debug.iface.BlockCanaryProxy;
 import com.github.moduth.blockcanary.BlockCanary;
 import com.github.moduth.blockcanary.BlockCanaryContext;
 

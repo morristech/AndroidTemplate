@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.arellomobile.mvp.MvpFacade;
 import com.d954mas.android.template.dagger.singleton.components.AppComponent;
 import com.d954mas.android.template.dagger.singleton.components.DaggerAppComponent;
 import com.d954mas.android.template.dagger.singleton.modules.AppModule;
@@ -16,10 +17,10 @@ import timber.log.Timber;
 @SuppressLint("Registered")
 public class BaseApp extends Application {
     private AppComponent component;
-
     @Override
     public void onCreate() {
         super.onCreate();
+        MvpFacade.init();
         component = initAppComponent();
         component.devMetricsProxy().init();
         component.leakCanaryProxy().init();

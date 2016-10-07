@@ -19,6 +19,14 @@
 
 -dontwarn sun.misc.**
 
+#region moxy
+-keep class **$$PresentersBinder
+-keep class **$$State
+-keep class **$$ParamsHolder
+-keep class **$$ViewStateClassNameProvider
+-keepnames class * extends com.arellomobile.mvp.*
+-dontwarn  com.arellomobile.mvp.MvpAppCompatFragment
+#endregion
 
 #rxJava
 -keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
