@@ -7,7 +7,7 @@
 
     <!-- Do not check auto-generated Moxy -->
     <Match>
-        <Class name="~.*$$State$*"/>
+        <Class name="~.*\$\$State\$.*"/>
     </Match>
 
     <!-- Do not check auto-generated manifest classes -->
