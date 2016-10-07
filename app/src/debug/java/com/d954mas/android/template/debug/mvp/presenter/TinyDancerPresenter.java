@@ -17,6 +17,7 @@ public class TinyDancerPresenter extends MvpPresenter<TinyDancerView> {
             return;
         }
         showTimeDancer = isEnabled;
+        getViewState().showTinyDancer(showTimeDancer);
         if (showTimeDancer) {
             TinyDancer.create().show(context);
         } else {
@@ -29,7 +30,4 @@ public class TinyDancerPresenter extends MvpPresenter<TinyDancerView> {
         }
     }
 
-    public boolean isShowTimeDancer() {
-        return showTimeDancer;
-    }
 }

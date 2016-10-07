@@ -28,11 +28,10 @@ public class DebugFragment extends BaseFragment implements TinyDancerView {
 
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        tinyDancerSwitcher.setChecked(tinyDancerPresenter.isShowTimeDancer());
-        tinyDancerSwitcher.setOnClickListener(v -> showTinyDancer(tinyDancerSwitcher.isChecked()));
+        tinyDancerSwitcher.setOnClickListener(v -> tinyDancerPresenter.toggleTinyDancer(getContext(), tinyDancerSwitcher.isChecked()));
     }
 
     @Override public void showTinyDancer(boolean show) {
-        tinyDancerPresenter.toggleTinyDancer(getContext(), show);
+        tinyDancerSwitcher.setChecked(show);
     }
 }

@@ -23,7 +23,7 @@ public class ViewContainerImpl implements ViewContainer {
     @Override public void initDebugView(Activity activity) {
         FragmentActivity fragmentActivity = (FragmentActivity) activity;
         if (fragmentActivity.getSupportFragmentManager().findFragmentByTag(DEBUG_FRAGMENT_TAG) == null) {
-            fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.debug_container, new DebugFragment()).commit();
+            fragmentActivity.getSupportFragmentManager().beginTransaction().replace(R.id.debug_container, new DebugFragment(), DEBUG_FRAGMENT_TAG).commit();
         }
     }
 
