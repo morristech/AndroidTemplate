@@ -7,13 +7,11 @@ import com.d954mas.android.template.debug.iface.BlockCanaryProxy;
 import com.d954mas.android.template.debug.iface.DevMetricsProxy;
 import com.d954mas.android.template.debug.iface.LeakCanaryProxy;
 import com.d954mas.android.template.debug.iface.StethoProxy;
-import com.d954mas.android.template.debug.iface.TinyDancerProxy;
 import com.d954mas.android.template.debug.iface.ViewContainer;
 import com.d954mas.android.template.debug.impl.BlockCanaryProxyImpl;
 import com.d954mas.android.template.debug.impl.DevMetricsProxyImpl;
 import com.d954mas.android.template.debug.impl.LeakCanaryProxyImpl;
 import com.d954mas.android.template.debug.impl.StethoProxyImpl;
-import com.d954mas.android.template.debug.impl.TinyDancerProxyImpl;
 import com.d954mas.android.template.debug.impl.ViewContainerImpl;
 
 import javax.annotation.Nonnull;
@@ -50,8 +48,4 @@ public class DebugDeveloperModule {
         return new BlockCanaryProxyImpl(app);
     }
 
-    @Provides @Singleton
-    TinyDancerProxy provideTinyDancer() {
-        return new TinyDancerProxyImpl();
-    }
 }

@@ -1,4 +1,9 @@
 <FindBugsFilter>
+    <Match>
+        <Class name="com.d954mas.android.template.debug.fragments.ScalpelFragment"/>
+        <Field name="scalpelFrameLayout"/>
+    </Match>
+
 
     <!-- Do not check auto-generated resources classes -->
     <Match>
