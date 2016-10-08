@@ -21,6 +21,7 @@ public class DebugFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         if (savedInstanceState == null) {
             getChildFragmentManager().beginTransaction()
+                    .add(R.id.content, new DeviceInfoFragment())
                     .add(R.id.content, new TinyDancerFragment())
                     .add(R.id.content, new ScalpelFragment())
                     .commit();
