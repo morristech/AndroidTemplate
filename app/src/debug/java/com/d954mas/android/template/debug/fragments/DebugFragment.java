@@ -24,6 +24,7 @@ public class DebugFragment extends BaseFragment {
                     .add(R.id.content, new DeviceInfoFragment())
                     .add(R.id.content, new TinyDancerFragment())
                     .add(R.id.content, new ScalpelFragment())
+                    .add(R.id.content, new LynxDebugFragment())
                     .commit();
         }
     }

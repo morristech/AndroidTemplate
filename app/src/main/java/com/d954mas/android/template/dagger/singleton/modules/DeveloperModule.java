@@ -3,11 +3,13 @@ package com.d954mas.android.template.dagger.singleton.modules;
 import com.d954mas.android.template.debug.iface.BlockCanaryProxy;
 import com.d954mas.android.template.debug.iface.DevMetricsProxy;
 import com.d954mas.android.template.debug.iface.LeakCanaryProxy;
+import com.d954mas.android.template.debug.iface.LynxProxy;
 import com.d954mas.android.template.debug.iface.StethoProxy;
 import com.d954mas.android.template.debug.iface.ViewContainer;
 import com.d954mas.android.template.debug.impl.EmptyBlockCanary;
 import com.d954mas.android.template.debug.impl.EmptyDevMetricsProxy;
 import com.d954mas.android.template.debug.impl.EmptyLeakCanaryProxy;
+import com.d954mas.android.template.debug.impl.EmptyLynx;
 import com.d954mas.android.template.debug.impl.EmptyStethoProxy;
 import com.d954mas.android.template.debug.impl.EmptyViewContainer;
 
@@ -41,6 +43,11 @@ public class DeveloperModule {
     @Provides @Singleton
     BlockCanaryProxy provideBlockCanaryProxy() {
         return new EmptyBlockCanary();
+    }
+
+    @Provides @Singleton
+    LynxProxy provideLynxProxy() {
+        return new EmptyLynx();
     }
 
 }

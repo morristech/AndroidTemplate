@@ -5,6 +5,7 @@ import com.d954mas.android.template.dagger.singleton.modules.DeveloperModule;
 import com.d954mas.android.template.debug.iface.BlockCanaryProxy;
 import com.d954mas.android.template.debug.iface.DevMetricsProxy;
 import com.d954mas.android.template.debug.iface.LeakCanaryProxy;
+import com.d954mas.android.template.debug.iface.LynxProxy;
 import com.d954mas.android.template.debug.iface.StethoProxy;
 import com.d954mas.android.template.ui.activities.BaseActivity;
 import com.d954mas.android.template.ui.activities.MainActivity;
@@ -27,4 +28,6 @@ public interface AppComponent {
     StethoProxy stethoProxy();
 
     BlockCanaryProxy blockCanaryProxy();
+
+    LynxProxy lynxProxy();
 }

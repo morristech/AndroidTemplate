@@ -110,6 +110,7 @@ dependencies {
     debugCompile 'com.jakewharton.scalpel:scalpel:1.1.2'
     debugCompile 'com.github.brianPlummer:tinydancer:0.0.9'
     debugCompile 'com.github.markzhai:blockcanary-android:1.3.1'
+    debugCompile 'com.github.pedrovgs:lynx:1.6'
     //endregion
     //region test
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
