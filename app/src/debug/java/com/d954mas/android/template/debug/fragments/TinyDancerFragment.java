@@ -12,11 +12,10 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.d954mas.android.template.R;
 import com.d954mas.android.template.debug.mvp.presenter.TinyDancerPresenter;
 import com.d954mas.android.template.debug.mvp.view.TinyDancerView;
-import com.d954mas.android.template.ui.fragments.BaseFragment;
 
 import butterknife.BindView;
 
-public class TinyDancerFragment extends BaseFragment implements TinyDancerView {
+public class TinyDancerFragment extends BaseDebugFragment implements TinyDancerView {
     @BindView(R.id.toggle_tiny_dancer) Switch tinyDancerSwitcher;
     @InjectPresenter TinyDancerPresenter tinyDancerPresenter;
 
@@ -28,6 +27,7 @@ public class TinyDancerFragment extends BaseFragment implements TinyDancerView {
 
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setTitle("TinyDancer");
         tinyDancerSwitcher.setOnClickListener(v -> tinyDancerPresenter.toggleTinyDancer(getContext(), tinyDancerSwitcher.isChecked()));
     }
 

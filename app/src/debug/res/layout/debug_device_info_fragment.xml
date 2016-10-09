@@ -5,12 +5,7 @@
               android:layout_height="wrap_content"
               android:orientation="vertical">
 
-    <TextView
-        style="@style/DebugCategoryTitle"
-        android:text="Device Info"
-        tools:ignore="HardcodedText"/>
-
-    <View style="@style/DebugDivider"/>
+    <include layout="@layout/debug_title_layout"/>
 
     <LinearLayout style="@style/DebugItemContainer">
 

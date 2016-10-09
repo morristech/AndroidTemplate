@@ -12,13 +12,12 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.d954mas.android.template.R;
 import com.d954mas.android.template.debug.mvp.presenter.ScalpelPresenter;
 import com.d954mas.android.template.debug.mvp.view.ScalpelView;
-import com.d954mas.android.template.ui.fragments.BaseFragment;
 import com.jakewharton.scalpel.ScalpelFrameLayout;
 
 import butterknife.BindView;
 
 
-public class ScalpelFragment extends BaseFragment implements ScalpelView {
+public class ScalpelFragment extends BaseDebugFragment implements ScalpelView {
     @BindView(R.id.toggle_enable_scalpel) Switch scalpelSwitch;
     @BindView(R.id.toggle_disable_graphics) Switch graphicsSwitch;
     @BindView(R.id.toggle_show_id) Switch idsSwitch;
@@ -34,6 +33,7 @@ public class ScalpelFragment extends BaseFragment implements ScalpelView {
 
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setTitle("Scalpel");
         scalpelSwitch.setOnClickListener(v -> scalpelPresenter.setEnableScalpel(scalpelSwitch.isChecked()));
         graphicsSwitch.setOnClickListener(v -> scalpelPresenter.setShowGraphics(graphicsSwitch.isChecked()));
         idsSwitch.setOnClickListener(v -> scalpelPresenter.setShowIds(idsSwitch.isChecked()));

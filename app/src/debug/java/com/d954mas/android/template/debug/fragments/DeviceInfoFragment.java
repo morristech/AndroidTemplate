@@ -12,11 +12,10 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.d954mas.android.template.R;
 import com.d954mas.android.template.debug.mvp.presenter.DeviceInfoPresenter;
 import com.d954mas.android.template.debug.mvp.view.DeviceInfoView;
-import com.d954mas.android.template.ui.fragments.BaseFragment;
 
 import butterknife.BindView;
 
-public class DeviceInfoFragment extends BaseFragment implements DeviceInfoView {
+public class DeviceInfoFragment extends BaseDebugFragment implements DeviceInfoView {
     @BindView(R.id.make_text) TextView makeLabel;
     @BindView(R.id.model_text) TextView modelLabel;
     @BindView(R.id.resolution_text) TextView resolutionLabel;
@@ -29,6 +28,11 @@ public class DeviceInfoFragment extends BaseFragment implements DeviceInfoView {
                                                  @Nullable ViewGroup container,
                                                  @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.debug_device_info_fragment, container, false);
+    }
+
+    @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        setTitle("Device Info");
     }
 
     @Override public void onCreate(Bundle savedInstanceState) {
