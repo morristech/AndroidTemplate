@@ -15,12 +15,14 @@ import com.d954mas.android.template.debug.mvp.view.ScalpelView;
 import com.jakewharton.scalpel.ScalpelFrameLayout;
 
 import butterknife.BindView;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 
 public class ScalpelFragment extends BaseDebugFragment implements ScalpelView {
     @BindView(R.id.toggle_enable_scalpel) Switch scalpelSwitch;
     @BindView(R.id.toggle_disable_graphics) Switch graphicsSwitch;
     @BindView(R.id.toggle_show_id) Switch idsSwitch;
+    @SuppressFBWarnings("UWF")
     ScalpelFrameLayout scalpelFrameLayout;
 
     @InjectPresenter ScalpelPresenter scalpelPresenter;
