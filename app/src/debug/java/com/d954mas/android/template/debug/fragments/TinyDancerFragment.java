@@ -22,7 +22,7 @@ public class TinyDancerFragment extends BaseDebugFragment implements TinyDancerV
     @Nullable @Override public View onCreateView(LayoutInflater inflater,
                                                  @Nullable ViewGroup container,
                                                  @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.debug_tiny_dancer_fragment, container, false);
+        return inflater.inflate(R.layout.debug_fragment_tiny_dancer, container, false);
     }
 
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

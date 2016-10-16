@@ -30,7 +30,7 @@ public class ScalpelFragment extends BaseDebugFragment implements ScalpelView {
     @Nullable @Override public View onCreateView(LayoutInflater inflater,
                                                  @Nullable ViewGroup container,
                                                  @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.debug_scalpel_fragment, container, false);
+        return inflater.inflate(R.layout.debug_fragment_scalpel, container, false);
     }
 
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {

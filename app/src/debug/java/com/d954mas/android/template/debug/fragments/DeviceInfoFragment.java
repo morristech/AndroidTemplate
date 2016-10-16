@@ -27,7 +27,7 @@ public class DeviceInfoFragment extends BaseDebugFragment implements DeviceInfoV
     @Nullable @Override public View onCreateView(LayoutInflater inflater,
                                                  @Nullable ViewGroup container,
                                                  @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.debug_device_info_fragment, container, false);
+        return inflater.inflate(R.layout.debug_fragment_device_info, container, false);
     }
 
     @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
