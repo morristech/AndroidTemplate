@@ -3,8 +3,8 @@ package com.d954mas.android.template;
 
 import android.support.annotation.NonNull;
 
-import com.d954mas.android.template.dagger.singleton.components.AppComponent;
-import com.d954mas.android.template.dagger.singleton.components.DaggerAppComponent;
+import com.d954mas.android.template.singleton.components.AppComponent;
+import com.d954mas.android.template.singleton.components.DaggerAppComponent;
 import com.d954mas.android.template.dagger.singleton.modules.AppModule;
 import com.d954mas.android.template.dagger.singleton.modules.DeveloperModule;
 

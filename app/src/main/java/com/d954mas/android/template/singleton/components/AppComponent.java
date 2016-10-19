@@ -1,7 +1,8 @@
-package com.d954mas.android.template.dagger.singleton.components;
+package com.d954mas.android.template.singleton.components;
 
 import com.d954mas.android.template.dagger.singleton.modules.AppModule;
 import com.d954mas.android.template.dagger.singleton.modules.DeveloperModule;
+import com.d954mas.android.template.dagger.singleton.modules.NetModule;
 import com.d954mas.android.template.debug.iface.BlockCanaryProxy;
 import com.d954mas.android.template.debug.iface.DevMetricsProxy;
 import com.d954mas.android.template.debug.iface.LeakCanaryProxy;
@@ -15,7 +16,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 @Singleton
-@Component(modules = {AppModule.class, DeveloperModule.class})
+@Component(modules = {AppModule.class, DeveloperModule.class, NetModule.class})
 public interface AppComponent {
     void inject(MainActivity mainActivity);
 

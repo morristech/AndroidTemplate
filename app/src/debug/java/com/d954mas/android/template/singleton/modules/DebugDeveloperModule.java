@@ -1,4 +1,4 @@
-package com.d954mas.android.template.debug.dagger.modules;
+package com.d954mas.android.template.singleton.modules;
 
 import android.app.Application;
 import android.support.annotation.NonNull;
