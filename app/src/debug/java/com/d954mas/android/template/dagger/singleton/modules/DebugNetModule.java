@@ -1,0 +1,13 @@
+package com.d954mas.android.template.dagger.singleton.modules;
+
+
+import com.facebook.stetho.okhttp3.StethoInterceptor;
+
+import okhttp3.OkHttpClient;
+
+
+public class DebugNetModule extends NetModule {
+    @Override protected OkHttpClient providesOkHttpClient() {
+        return new OkHttpClient.Builder().addNetworkInterceptor(new StethoInterceptor()).build();
+    }
+}

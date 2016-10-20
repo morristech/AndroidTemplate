@@ -6,9 +6,9 @@ import android.view.ViewGroup;
 
 import com.d954mas.android.template.App;
 import com.d954mas.android.template.R;
+import com.d954mas.android.template.dagger.singleton.components.DaggerDebugAppComponent;
 import com.d954mas.android.template.debug.fragments.DebugFragment;
 import com.d954mas.android.template.debug.iface.ViewContainer;
-import com.d954mas.android.template.singleton.components.DaggerDebugAppComponent;
 
 public class ViewContainerImpl implements ViewContainer {
     private static final String DEBUG_FRAGMENT_TAG = "DEBUG_FRAGMENT_TAG";

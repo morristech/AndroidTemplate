@@ -10,8 +10,8 @@ import android.widget.Button;
 
 import com.d954mas.android.template.App;
 import com.d954mas.android.template.R;
+import com.d954mas.android.template.dagger.singleton.components.DaggerDebugAppComponent;
 import com.d954mas.android.template.debug.iface.LynxProxy;
-import com.d954mas.android.template.singleton.components.DaggerDebugAppComponent;
 
 import javax.inject.Inject;
 

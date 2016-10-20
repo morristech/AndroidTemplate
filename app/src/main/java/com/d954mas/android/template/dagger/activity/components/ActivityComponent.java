@@ -4,7 +4,7 @@ import android.app.Activity;
 
 import com.d954mas.android.template.dagger.PerActivity;
 import com.d954mas.android.template.dagger.activity.modules.ActivityModule;
-import com.d954mas.android.template.singleton.components.AppComponent;
+import com.d954mas.android.template.dagger.singleton.components.AppComponent;
 
 import dagger.Component;
 

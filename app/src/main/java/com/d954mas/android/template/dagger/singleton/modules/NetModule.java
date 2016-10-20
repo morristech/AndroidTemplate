@@ -10,7 +10,7 @@ import okhttp3.OkHttpClient;
 @Module
 public class NetModule {
     @Provides @Singleton
-    OkHttpClient providesOkHttpClient() {
+    protected OkHttpClient providesOkHttpClient() {
         return new OkHttpClient();
     }
 

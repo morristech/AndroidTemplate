@@ -8,8 +8,11 @@ import com.d954mas.android.template.R;
 
 import javax.inject.Inject;
 
+import okhttp3.OkHttpClient;
+
 public class MainActivity extends BaseActivity {
     @Inject Context application;
+    @Inject OkHttpClient okHttpClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

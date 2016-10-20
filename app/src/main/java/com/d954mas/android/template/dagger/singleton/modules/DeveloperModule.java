@@ -1,5 +1,8 @@
 package com.d954mas.android.template.dagger.singleton.modules;
 
+import android.app.Application;
+import android.support.annotation.NonNull;
+
 import com.d954mas.android.template.debug.iface.BlockCanaryProxy;
 import com.d954mas.android.template.debug.iface.DevMetricsProxy;
 import com.d954mas.android.template.debug.iface.LeakCanaryProxy;
@@ -21,32 +24,32 @@ import dagger.Provides;
 @Module
 public class DeveloperModule {
     @Provides @Singleton
-    DevMetricsProxy provideDevMetricsProxy() {
+    protected DevMetricsProxy provideDevMetricsProxy(@NonNull Application application) {
         return new EmptyDevMetricsProxy();
     }
 
     @Provides @Singleton
-    LeakCanaryProxy provideLeakCanaryProxy() {
+    protected LeakCanaryProxy provideLeakCanaryProxy(@NonNull Application application) {
         return new EmptyLeakCanaryProxy();
     }
 
     @Provides @Singleton
-    StethoProxy provideStethoProxy() {
+    protected StethoProxy provideStethoProxy(@NonNull Application application) {
         return new EmptyStethoProxy();
     }
 
     @Provides @Singleton
-    ViewContainer provideViewContainer() {
+    protected ViewContainer provideViewContainer() {
         return new EmptyViewContainer();
     }
 
     @Provides @Singleton
-    BlockCanaryProxy provideBlockCanaryProxy() {
+    protected BlockCanaryProxy provideBlockCanaryProxy(@NonNull Application application) {
         return new EmptyBlockCanary();
     }
 
     @Provides @Singleton
-    LynxProxy provideLynxProxy() {
+    protected LynxProxy provideLynxProxy(@NonNull Application application) {
         return new EmptyLynx();
     }
 

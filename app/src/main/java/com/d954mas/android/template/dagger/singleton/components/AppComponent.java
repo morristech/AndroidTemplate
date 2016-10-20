@@ -1,4 +1,4 @@
-package com.d954mas.android.template.singleton.components;
+package com.d954mas.android.template.dagger.singleton.components;
 
 import com.d954mas.android.template.dagger.singleton.modules.AppModule;
 import com.d954mas.android.template.dagger.singleton.modules.DeveloperModule;

@@ -1,4 +1,4 @@
-package com.d954mas.android.template.singleton.modules;
+package com.d954mas.android.template.dagger.singleton.modules;
 
 import android.app.Application;
 import android.support.annotation.NonNull;
@@ -17,41 +17,36 @@ import com.d954mas.android.template.debug.impl.StethoProxyImpl;
 import com.d954mas.android.template.debug.impl.ViewContainerImpl;
 
 import javax.annotation.Nonnull;
-import javax.inject.Singleton;
-
-import dagger.Module;
-import dagger.Provides;
 
 
-@Module
-public class DebugDeveloperModule {
-    @Provides @Singleton
-    DevMetricsProxy provideDevMetricsProxy(@NonNull Application application) {
+public class DebugDeveloperModule extends DeveloperModule {
+    @Override
+    protected DevMetricsProxy provideDevMetricsProxy(@NonNull Application application) {
         return new DevMetricsProxyImpl(application);
     }
 
-    @Provides @Singleton
-    LeakCanaryProxy provideLeakCanaryProxy(@NonNull Application app) {
+    @Override
+    protected LeakCanaryProxy provideLeakCanaryProxy(@NonNull Application app) {
         return new LeakCanaryProxyImpl(app);
     }
 
-    @Provides @Singleton
-    StethoProxy provideStethoProxy(@NonNull Application app) {
+    @Override
+    protected StethoProxy provideStethoProxy(@NonNull Application app) {
         return new StethoProxyImpl(app);
     }
 
-    @Provides @Singleton
-    ViewContainer provideViewContainer() {
+    @Override
+    protected ViewContainer provideViewContainer() {
         return new ViewContainerImpl();
     }
 
-    @Provides @Singleton
-    BlockCanaryProxy provideBlockCanaryProxy(@Nonnull Application app) {
+    @Override
+    protected BlockCanaryProxy provideBlockCanaryProxy(@Nonnull Application app) {
         return new BlockCanaryProxyImpl(app);
     }
 
-    @Provides @Singleton
-    LynxProxy proviseLynxProxy(@NonNull Application app) {
+    @Override
+    protected LynxProxy provideLynxProxy(@NonNull Application app) {
         return new LynxProxyImpl(app);
     }
 

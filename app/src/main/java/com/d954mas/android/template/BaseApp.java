@@ -6,7 +6,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.arellomobile.mvp.MvpFacade;
-import com.d954mas.android.template.singleton.components.AppComponent;
+import com.d954mas.android.template.dagger.singleton.components.AppComponent;
 import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
 
 import timber.log.Timber;
@@ -14,7 +14,6 @@ import timber.log.Timber;
 @SuppressLint("Registered")
 public abstract class BaseApp extends Application {
     private AppComponent component;
-
     @Override
     public void onCreate() {
         super.onCreate();
