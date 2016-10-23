@@ -10,6 +10,7 @@ import com.d954mas.android.template.debug.iface.LynxProxy;
 import com.d954mas.android.template.debug.iface.StethoProxy;
 import com.d954mas.android.template.ui.activities.BaseActivity;
 import com.d954mas.android.template.ui.activities.MainActivity;
+import com.squareup.picasso.Picasso;
 
 import javax.inject.Singleton;
 
@@ -31,4 +32,6 @@ public interface AppComponent {
     BlockCanaryProxy blockCanaryProxy();
 
     LynxProxy lynxProxy();
+
+    Picasso picasso();
 }

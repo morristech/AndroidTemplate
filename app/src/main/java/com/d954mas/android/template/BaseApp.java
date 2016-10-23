@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import com.arellomobile.mvp.MvpFacade;
 import com.d954mas.android.template.dagger.singleton.components.AppComponent;
 import com.frogermcs.androiddevmetrics.AndroidDevMetrics;
+import com.squareup.picasso.Picasso;
 
 import timber.log.Timber;
 
@@ -27,6 +28,9 @@ public abstract class BaseApp extends Application {
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
+        Picasso picasso = component.picasso();
+        picasso.setIndicatorsEnabled(BuildConfig.DEBUG);
+        Picasso.setSingletonInstance(picasso);
     }
 
     @NonNull
